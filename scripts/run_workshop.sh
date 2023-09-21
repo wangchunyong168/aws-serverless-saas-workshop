@@ -18,7 +18,7 @@ echo "################ Done running pre-req script... ################"
 echo "################ Running lab2... ################"
 
 cd ../Lab2/scripts
-./deployment.sh -s -c --email syeduh+serverlesslab@amazon.com
+./deployment.sh -s -c --email wangchunyong@163.com
 cd ../../scripts/
 
 python3 lab2_updates.py
