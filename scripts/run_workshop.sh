@@ -7,7 +7,7 @@
 
 echo "################ Running pre-req script... ################"
 cd ../Cloud9Setup/
-./increase-disk-size.sh
+# ./increase-disk-size.sh
 # ./pre-requisites.sh
 cd ../scripts/
 echo "################ Done running pre-req script... ################"
