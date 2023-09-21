@@ -62,7 +62,7 @@ if [[ $server -eq 1 ]]; then
     exit 1
   fi
 
-  sam build -t template.yaml --use-container
+  sam build -t template.yaml 
   sam deploy --config-file samconfig.toml --region="$REGION" --stack-name="$stackname"
   cd ../scripts || exit # stop execution if cd fails
 fi

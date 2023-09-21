@@ -81,7 +81,7 @@ if [[ $server -eq 1 ]]; then
     exit 1
   fi
 
-  sam build -t template.yaml --use-container
+  sam build -t template.yaml 
 
   if [ "$IS_RUNNING_IN_EVENT_ENGINE" = true ]; then
     sam deploy --config-file samconfig.toml --region="$REGION" --parameter-overrides EventEngineParameter=$IS_RUNNING_IN_EVENT_ENGINE AdminUserPoolCallbackURLParameter=$ADMIN_SITE_URL
