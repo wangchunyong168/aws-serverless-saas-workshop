@@ -17,15 +17,9 @@ echo "################ Done running pre-req script... ################"
 
 echo "################ Running lab2... ################"
 
-cd ../Lab2/scripts
+cd ../Solution/Lab2/scripts
 ./deployment.sh -s -c --email wangchunyong@163.com
-cd ../../scripts/
-
-python3 lab2_updates.py
-
-cd ../Lab2/scripts
-./deployment.sh -s
-cd ../../scripts/
+./deploy-updates.sh
 
 echo "################ Done running lab2. ################"
 
@@ -34,15 +28,9 @@ sleep 60
 
 echo "################ Running lab3... ################"
 
-cd ../Lab3/scripts
+cd ../../Lab3/scripts/
 ./deployment.sh -s -c
-cd ../../scripts/
-
-python3 lab3_updates.py
-
-cd ../Lab3/scripts
-./deployment.sh -s
-cd ../../scripts/
+./deploy-updates.sh
 
 echo "################ Done running lab3. ################"
 
@@ -51,10 +39,8 @@ sleep 60
 
 echo "################ Running lab4... ################"
 
-python3 lab4_updates.py
-cd ../Lab4/scripts
-./deployment.sh -s
-cd ../../scripts/
+cd ../../Lab4/scripts/
+./deployment.sh -s -c
 
 echo "################ Done running lab4. ################"
 
@@ -62,16 +48,9 @@ echo "################ Sleeping for a minute before moving to next lab... ######
 sleep 60
 
 echo "################ Running lab5... ################"
-
-cd ../Lab5/scripts/
+cd ../../Lab5/scripts/
 ./deployment.sh -s -c
-cd ../../scripts/
-
-python3 lab5_updates.py
-
-cd ../Lab5/scripts/
-./deployment.sh -s
-cd ../../scripts/
+./deploy-updates.sh
 
 echo "################ Done running lab5. ################"
 
