@@ -8,12 +8,12 @@ python3 -m pylint -E -d E0401 $(find . -iname "*.py" -not -path "./.aws-sam/*")
   fi
 #Deploying shared services changes
 echo "Deploying shared services changes"  
-echo Y | sam sync --stack-name serverless-saas -t shared-template.yaml --code --resource-id LambdaFunctions/ServerlessSaaSLayers --resource-id LambdaFunctions/SharedServicesAuthorizerFunction -u
+echo Y | sam sync --stack-name serverless-saas -t shared-template.yaml --code --resource-id LambdaFunctions/ServerlessSaaSLayers --resource-id LambdaFunctions/SharedServicesAuthorizerFunction
 
 #Deploying tenant services changes
 echo "Deploying tenant services changes"
 rm -rf .aws-sam/
-echo Y | sam sync --stack-name stack-pooled -t tenant-template.yaml --code --resource-id ServerlessSaaSLayers --resource-id BusinessServicesAuthorizerFunction --resource-id CreateProductFunction -u
+echo Y | sam sync --stack-name stack-pooled -t tenant-template.yaml --code --resource-id ServerlessSaaSLayers --resource-id BusinessServicesAuthorizerFunction --resource-id CreateProductFunction
 
 cd ../scripts || exit
 ./geturl.sh
