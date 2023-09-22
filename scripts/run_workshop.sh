@@ -59,9 +59,15 @@ sleep 60
 
 echo "################ Running lab6... ################"
 
-python3 lab6_updates.py
-cd ../Lab6/scripts/
-./deployment.sh
-cd ../../scripts/
+cd ../../Lab6/scripts/
+./deployment.sh 
+./test-basic-tier-throttling.sh <ID Token>
 
 echo "################ Done running lab6. ################"
+
+echo "################ Running lab7... ################"
+
+cd ../../Lab7/scripts/
+./deployment.sh 
+
+echo "################ Done running lab7. ################"
