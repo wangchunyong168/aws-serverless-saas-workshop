@@ -53,7 +53,6 @@ echo "################ Running lab5... ################"
 cd ../../Lab5/client/Application
 yarn add cypress
 cd ../../scripts/
-cd ../../Lab5/scripts/
 ./deployment.sh -s -c
 ./deploy-updates.sh
 
