@@ -12,7 +12,7 @@ phases:
       - python -m pip install aws-sam-cli==1.33.0
       - sam --version
       # Installing project dependencies
-      - cd Lab5/server/ProductService
+      - cd Solution/Lab5/server/ProductService
       - python -m pip install -r requirements.txt 
       - cd ../OrderService
       - python -m pip install -r requirements.txt 
