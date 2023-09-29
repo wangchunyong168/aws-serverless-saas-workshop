@@ -28,7 +28,9 @@ sleep 60
 
 echo "################ Running lab3... ################"
 
-cd ../../Lab3/scripts/
+cd ../../Lab3/client/Application
+yarn add cypress
+cd ../../scripts/
 ./deployment.sh -s -c
 ./deploy-updates.sh
 
@@ -48,6 +50,9 @@ echo "################ Sleeping for a minute before moving to next lab... ######
 sleep 60
 
 echo "################ Running lab5... ################"
+cd ../../Lab5/client/Application
+yarn add cypress
+cd ../../scripts/
 cd ../../Lab5/scripts/
 ./deployment.sh -s -c
 ./deploy-updates.sh
