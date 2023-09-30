@@ -9,7 +9,7 @@ phases:
     commands:
       # Install packages or any pre-reqs in this phase.
       # Upgrading SAM CLI to 1.33.0 version
-      - python -m pip install aws-sam-cli==1.33.0
+      - python -m pip install aws-sam-cli
       - sam --version
       # Installing project dependencies
       - cd Solution/Lab5/server/ProductService
